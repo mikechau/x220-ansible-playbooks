@@ -4,6 +4,14 @@
   connection: local
   sudo: yes
   tasks:
+    - name: update packages
+      apt: >
+        update_cache=yes
+
+    - name: upgrade packages
+      apt: >
+        upgrade=dist
+
     - name: install openssh-server
       apt: >
         name=openssh-server
