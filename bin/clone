@@ -1,0 +1,4 @@
+mkdir -p ~/code/github
+
+cd ~/code/github && git clone https://github.com/mikechau/x220-ansible-playbooks.git
+
