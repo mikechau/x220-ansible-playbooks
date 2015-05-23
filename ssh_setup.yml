@@ -1,0 +1,24 @@
+---
+- name: ssh setup
+  hosts: 127.0.0.1
+  connection: local
+  sudo: yes
+  tasks:
+    - name: install openssh-server
+      apt: >
+        name=openssh-server
+        state=present
+
+    - name: backup sshd_config
+      command: cp /etc/ssh/sshd_config /etc/sshd_config.factory-defaults
+
+    - name: make sshd_config.factory-defaults read only
+      file: >
+        state=touch
+        path=/etc/sshd_config.factory-defaults
+        mode="u=r,g=r,o=r"
+
+    - name: restart ssh
+      service: >
+        name=ssh
+        state=restarted
