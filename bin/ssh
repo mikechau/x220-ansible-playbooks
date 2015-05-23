@@ -8,3 +8,4 @@ sudo chmod a-w /etc/sshd_config.factory-defaults
 
 sudo service ssh restart
 
+sudo ssh-keygen
