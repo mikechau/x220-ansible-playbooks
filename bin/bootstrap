@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo apt-get install pip
+sudo apt-get install python-pip
 sudo pip install ansible==1.8.4
