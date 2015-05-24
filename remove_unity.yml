@@ -1,0 +1,7 @@
+---
+- name: remove unity
+  hosts: thinkpad
+  sudo: yes
+  roles:
+    - role: remove_unity
+

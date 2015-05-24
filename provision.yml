@@ -1,0 +1,19 @@
+---
+- name: provision
+  hosts: thinkpad
+  roles:
+#    - role: packages
+#      sudo: yes
+#      tags:
+#        - packages
+
+#    - role: cinnamon
+#      sudo: yes
+
+     - role: yakuake
+       sudo: yes
+
+#    - role: cleanup
+#      sudo: yes
+#
+

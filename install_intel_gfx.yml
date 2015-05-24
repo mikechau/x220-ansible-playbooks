@@ -1,0 +1,7 @@
+---
+- name: install intel gfx
+  hosts: thinkpad
+  sudo: yes
+  roles:
+    - role: intel_gfx
+

@@ -1,0 +1,10 @@
+---
+- name: autoremove
+  command: apt-get autoremove -y
+  register: aptget_autoremove
+  changed_when: aptget_autoremove.stdout.find("REMOVE") != -1
+
+- name: autoclean
+  command: apt-get autoclean -y
+  changed_when: false
+
