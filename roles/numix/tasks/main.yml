@@ -1,0 +1,15 @@
+---
+- name: add numix ppa
+  apt_repository:
+    repo: ppa:numix/ppa
+
+- name: update cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: install numix-gtk-theme
+  apt:
+    state: "{{ numix_force_state | default('present') }}"
+    name: "{{ item }}"
+  with_items: numix_packages_to_install

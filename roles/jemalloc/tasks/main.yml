@@ -1,0 +1,27 @@
+---
+- name: download jemalloc
+  git: >
+    repo="{{ jemalloc_git_repo }}"
+    version="{{ jemalloc_version }}"
+    dest="{{ jemalloc_src_path }}"
+    force=yes
+    depth=1
+
+- name: configure jemalloc
+  command: ./autogen.sh --prefix=/usr
+  args:
+    chdir: "{{ jemalloc_src_path }}"
+
+- name: make jemalloc
+  command: make
+  args:
+    chdir: "{{ jemalloc_src_path }}"
+
+# http://www.canonware.com/pipermail/jemalloc-discuss/2013-May/000593.html
+- name: make install jemalloc
+  command: make install_bin install_include install_lib
+  args:
+    chdir: "{{ jemalloc_src_path }}"
+
+- name: reload ldconfig
+  command: ldconfig

@@ -1,0 +1,10 @@
+---
+- name: update cache
+  apt:
+    update_cache: yes
+
+- name: install new base packages
+  apt:
+    state: "{{ packages_base_force_state | default('present') }}"
+    name: "{{ item }}"
+  with_items: packages_base_to_install

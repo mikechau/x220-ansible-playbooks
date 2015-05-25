@@ -1,0 +1,14 @@
+---
+# Specify the git repo to clone from.
+jemalloc_git_repo: https://github.com/jemalloc/jemalloc.git
+
+# Version of jemalloc, this is actually a git repo tag.
+jemalloc_version: 3.6.0
+
+# The source path to download to.
+jemalloc_src_path: /usr/local/src/jemalloc
+
+# Valid options:
+#   - source - download the repo and make install
+#   - package - install from a repo (CentOS only)
+jemalloc_install: source

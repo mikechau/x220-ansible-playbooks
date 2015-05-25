@@ -1,0 +1,21 @@
+---
+packages_custom_to_install:
+  - name: hexchat
+    repo: ppa:gwendal-lebihan-dev/hexchat-stable
+
+  - name: clementine
+    repo: ppa:me-davidsansome/clementine
+
+  - name: sublime-text-installer
+    repo: ppa:webupd8team/sublime-text-3
+
+  - name: pidgin
+    repo: ppa:pidgin-developers/ppa
+
+  - name: atom
+    repo: ppa:webupd8team/atom
+
+  - name: tlp
+    repo: ppa:linrunner/tlp
+
+packages_custom_force_state: present

@@ -1,0 +1,26 @@
+---
+- name: add nodejs key
+  apt_key:
+    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+    state: present
+
+- name: add nodejs repo
+  apt_repository:
+    repo: "deb https://deb.nodesource.com/node_0.12 {{ ansible_distribution_release }} main"
+
+- name: install nodejs
+  apt:
+    name: nodejs
+    state: "{{ nodejs_force_state | default('present') }}"
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: install npm-shrinkwrap
+  npm:
+    name: npm-shrinkwrap
+    global: yes
+
+- name: install npm-check
+  npm:
+    name: npm-check
+    global: yes

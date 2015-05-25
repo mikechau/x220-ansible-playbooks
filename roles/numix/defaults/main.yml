@@ -1,0 +1,6 @@
+---
+numix_force_state: present
+numix_packages_to_install:
+  - numix-icon-theme
+  - numix-icon-theme-bevel
+  - numix-gtk-theme

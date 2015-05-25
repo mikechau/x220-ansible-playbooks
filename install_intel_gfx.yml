@@ -2,6 +2,28 @@
 - name: install intel gfx
   hosts: thinkpad
   sudo: yes
-  roles:
-    - role: intel_gfx
+  tasks:
+    - name: install xorg edgers
+      apt_repository:
+        repo: ppa:xorg-edgers/ppa
 
+    - name: update and upgrade packages
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+        upgrade: dist
+
+    - name: install packages
+      apt:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - libgl1-mesa-dri
+        - libva1
+        - vainfo
+        - i965-va-driver
+        - libva-glx1
+        - libva-dev
+
+    - debug:
+        msg: 'Please restart your machine'

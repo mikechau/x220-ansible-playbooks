@@ -1,0 +1,30 @@
+---
+packages_base_to_install:
+  - vim
+  - tmux
+  - software-properties-common
+  - python-software-properties
+  - htop
+  - speedcrunch
+  - redshift
+  - aptitude
+  - adobe-flashplugin
+  - build-essential
+  - yakuake
+  - postgresql-client
+  - libpq-dev
+  - mysql-client
+  - libmysqlclient-dev
+  - dkms
+  - apt-transport-https
+  - lsb-release
+  - curl
+  - autoconf
+  - make
+  - chromium-browser
+  - chromium-codecs-ffmpeg
+  - chromium-codecs-ffmpeg-extra
+  - python-gpgme
+  # - skype
+
+packages_base_force_state: present

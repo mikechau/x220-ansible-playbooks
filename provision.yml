@@ -2,18 +2,50 @@
 - name: provision
   hosts: thinkpad
   roles:
-#    - role: packages
-#      sudo: yes
-#      tags:
-#        - packages
+    - role: packages_base
+      sudo: yes
+      tags:
+        - packages
 
-#    - role: cinnamon
-#      sudo: yes
+    - role: jemalloc
+      sudo: yes
+      jemalloc_install: source
+      tags:
+        - packages
 
-     - role: yakuake
-       sudo: yes
+    - role: rvm1-ruby
+      sudo: yes
+      rvm1_rubies:
+        - ruby-2.2.2
+      rvm1_install_flags: --auto-dotfiles --user-install
+      rvm1_ruby_install_flags: --with-jemalloc
+      rvm1_install_path: "/home/{{ ansible_ssh_user }}/.rvm"
 
-#    - role: cleanup
-#      sudo: yes
-#
+    - role: virtualbox
+      sudo: yes
+      tags:
+        - packages
 
+    - role: nodejs
+      sudo: yes
+      tags:
+        - packages
+
+    - role: packages_custom
+      sudo: yes
+      tags:
+        - packages
+
+    - role: numix
+      sudo: yes
+      tags:
+        - packages
+
+    - role: dropbox
+      sudo: yes
+
+    - role: heroku
+      sudo: yes
+
+    - role: cleanup
+      sudo: yes

@@ -1,6 +1,0 @@
----
-- name: install yakuake
-  apt:
-    name: yakuake
-    state: present
-

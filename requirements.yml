@@ -1,0 +1,4 @@
+---
+- src: https://github.com/rvm/rvm1-ansible.git
+  path: roles
+  name: rvm1-ruby

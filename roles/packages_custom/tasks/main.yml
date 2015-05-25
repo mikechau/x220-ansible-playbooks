@@ -1,0 +1,17 @@
+---
+- name: add repos
+  apt_repository:
+    repo: "{{ item.repo }}"
+  when: item.repo is defined
+  with_items: packages_custom_to_install
+
+- name: update cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: install packages
+  apt:
+    state: "{{ packages_custom_force_state | default('present') }}"
+    name: "{{ item.name }}"
+  with_items: packages_custom_to_install

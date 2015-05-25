@@ -1,7 +1,79 @@
+# http://askubuntu.com/questions/292394/how-to-completely-remove-unity-and-replace-it-with-cinnamon
+
 ---
 - name: remove unity
   hosts: thinkpad
   sudo: yes
-  roles:
-    - role: remove_unity
+  tasks:
+    - name: make nemo default file manager
+      sudo: no
+      command: xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
 
+    - name: dont show desktop icons on gnome
+      sudo: no
+      command: gsettings set org.gnome.desktop.background show-desktop-icons false
+
+    - name: show desktop icons nemo
+      sudo: no
+      command: gsettings set org.nemo.desktop show-desktop-icons true
+
+    - name: remove unity packages
+      shell: >
+        apt-get autoremove --purge -y
+        unity
+        unity-common
+        unity-services
+        unity-lens-\*
+        unity-scope-\*
+        unity-webapps-\*
+        gnome-control-center-unity
+        hud
+        libunity-core-6\*
+        libunity-misc4
+        libunity-webapps\*
+        appmenu-gtk
+        appmenu-gtk3
+        appmenu-qt\*
+        overlay-scrollbar\*
+        activity-log-manager-control-center
+        firefox-globalmenu
+        thunderbird-globalmenu
+        libufe-xidgetter0
+        xul-ext-unity
+        xul-ext-webaccounts
+        webaccounts-extension-common
+        xul-ext-websites-integration
+        gnome-control-center
+        gnome-session
+
+    - name: remove thunderbird addon
+      file:
+        state: absent
+        path: /usr/lib/thunderbird-addons/extensions/messagingmenu@mozilla.com.xpi
+
+    - name: remove compiz
+      shell: >
+        apt-get autoremove --purge -y
+        compiz
+        compiz-gnome
+        compiz-plugins-default
+        libcompizconfig0
+
+    - name: remove nautilus
+      shell: >
+        apt-get autoremove --purge -y
+        nautilus
+        nautilus-sendto
+        nautilus-sendto-empathy
+        nautilus-share
+
+    - name: clean up configs
+      file:
+        state: absent
+        path: "{{ item }}"
+      with_items:
+        - "~/.local/share/unity-webapps"
+        - "~/.compiz"
+        - "~/.config/compiz-1"
+        - "~/.config/nautilus"
+        - "~/.local/share/nautilus"
