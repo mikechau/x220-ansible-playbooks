@@ -25,6 +25,7 @@ packages_base_to_install:
   - chromium-codecs-ffmpeg
   - chromium-codecs-ffmpeg-extra
   - python-gpgme
+  - tig
   # - skype
 
 packages_base_force_state: present
