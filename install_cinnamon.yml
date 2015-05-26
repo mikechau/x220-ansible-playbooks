@@ -1,0 +1,27 @@
+---
+- name: install cinnamon
+  hosts: thinkpad
+  pre_tasks:
+    - name: check if overlay scrollbar is installed
+      command: dpkg -s overlay-scrollbar
+      register: overlay_scrollbar
+      ignore_errors: true
+
+    - name: disable scroll overlay
+      command: gsettings set com.canonical.desktop.interface scrollbar-mode normal
+      when: overlay_scrollbar.stdout.find('install ok installed') != -1
+
+  tasks:
+    - name: add cinnamon repo
+      apt_repository:
+        repo: ppa:tsvetko.tsvetkov/cinnamon
+      sudo: yes
+
+    - name: install cinnamon
+      apt:
+        update_cache: yes
+        name: cinnamon
+        state: present
+        cache_valid_time: 3600
+      sudo: yes
+

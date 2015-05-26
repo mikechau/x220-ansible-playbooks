@@ -1,0 +1,16 @@
+---
+- name: install thinkfan
+  apt:
+    state: present
+    name: thinkfan
+
+- name: generate confs
+  file:
+    state: present
+    src: "{{ item.src  }}"
+    dest: "{{ item.dest }}"
+  with_items: thinkfan_confs
+
+- debug:
+    msg: "Please restart."
+

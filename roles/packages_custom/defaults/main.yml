@@ -1,5 +1,8 @@
 ---
 packages_custom_to_install:
+  - name: timeshift
+    repo: ppa:teejee2008/ppa
+
   - name: hexchat
     repo: ppa:gwendal-lebihan-dev/hexchat-stable
 

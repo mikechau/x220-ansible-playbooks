@@ -1,0 +1,11 @@
+---
+thinkpad_configs:
+  - src: etc/thinkpad.conf
+    dest: /etc/thinkpad.conf
+
+  - src: etc/modprobe.d/thinkfan.conf
+    dest: /etc/modprobe.d/thinkfan.conf
+
+  - src: etc/default/thinkfan
+    dest: /etc/default/thinkfan
+

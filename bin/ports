@@ -1,0 +1,3 @@
+#!/bin/ssh
+
+sudo lsof -iTCP -sTCP:LISTEN | grep ${@:1}

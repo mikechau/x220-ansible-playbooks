@@ -47,5 +47,9 @@
     - role: heroku
       sudo: yes
 
+    - role: thinkfan
+      sudo: yes
+
     - role: cleanup
       sudo: yes
+
