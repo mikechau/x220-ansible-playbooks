@@ -19,6 +19,7 @@ packages_base_to_install:
   - apt-transport-https
   - lsb-release
   - curl
+  - wget
   - autoconf
   - make
   - chromium-browser

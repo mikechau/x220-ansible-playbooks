@@ -14,7 +14,7 @@
 
 4. Cookies Manager+: https://addons.mozilla.org/en-US/firefox/addon/cookies-manager-plus/
 
-5. Custom Buttons: http://custombuttons.mozdev.org/
+5. Custom Buttons: https://addons.mozilla.org/en-US/firefox/addon/custom-buttons/
 
 6. DownThemAll!: http://www.downthemall.net/
 
