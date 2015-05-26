@@ -20,7 +20,13 @@
     name: npm-shrinkwrap
     global: yes
 
+- name: install npm-check-updates
+  npm:
+    name: npm-check-updates
+    global: yes
+
 - name: install npm-check
   npm:
     name: npm-check
     global: yes
+
