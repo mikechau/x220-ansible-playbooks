@@ -1,0 +1,17 @@
+---
+- name: create scripts dir
+  file:
+    state: directory
+    path: ~/code/scripts
+
+- name: git clone repo
+  git:
+    repo: https://github.com/rupa/z.git
+    dest: ~/code/scripts/z
+    version: master
+  register: z_git
+
+- name: install z
+  lineinfile:
+    dest: ~/.bashrc
+    line: ". ~/code/scripts/z/z.sh"
