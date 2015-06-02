@@ -2,14 +2,5 @@
 - name: install nemo extensions
   hosts: thinkpad
   sudo: yes
-  tasks:
-    - name: install nemo extension packages
-      apt:
-        state: present
-        name: "{{ item }}"
-      with_items:
-        - nemo-dropbox
-
-  post_tasks:
-    - name: quit nemo
-      command: pkill nemo
+  roles:
+    - role: nemo_extensions

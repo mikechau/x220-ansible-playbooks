@@ -1,0 +1,20 @@
+---
+- name: generate conf
+  shell: ./autogen.sh
+  args:
+    chdir: "{{ nemo_extensions_fileroller_src_dir }}"
+
+- name: config fileroller
+  shell: ./configure
+  args:
+    chdir: "{{ nemo_extensions_fileroller_src_dir }}"
+
+- name: make
+  shell: make
+  args:
+    chdir: "{{ nemo_extensions_fileroller_src_dir }}"
+
+- name: make install
+  shell: make install
+  args:
+    chdir: "{{ nemo_extensions_fileroller_src_dir }}"

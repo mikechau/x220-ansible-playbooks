@@ -1,0 +1,5 @@
+---
+nemo_extensions_install_from_git: true
+nemo_extensions_src_base_dir: "/usr/src/nemo-extensions"
+nemo_extensions_fileroller_src_dir: "{{ nemo_extensions_src_base_dir }}/nemo-fileroller"
+nemo_extensions_dropbox_src_dir: "{{ nemo_extensions_src_base_dir }}/nemo-dropbox"

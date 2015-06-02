@@ -1,0 +1,16 @@
+---
+- name: pull repo
+  git:
+    repo: https://github.com/linuxmint/nemo-extensions.git
+    dest: "{{ nemo_extensions_src_base_dir }}"
+    version: master
+
+- name: install libnemo-extension-dev
+  apt:
+    name: libnemo-extension-dev
+    state: present
+
+- name: install doc-utils
+  apt:
+    name: docutils-common
+    state: present

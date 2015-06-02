@@ -1,0 +1,12 @@
+---
+- include: _git.yml
+  when: nemo_extensions_install_from_git
+
+- include: _dropbox.yml
+  when: nemo_extensions_install_from_git
+
+# - include: _fileroller.yml
+#   when: nemo_extensions_install_from_git
+
+- include: _packages.yml
+  when: not nemo_extensions_install_from_git
