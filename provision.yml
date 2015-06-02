@@ -20,6 +20,7 @@
       rvm1_install_flags: --auto-dotfiles --user-install
       rvm1_ruby_install_flags: --with-jemalloc
       rvm1_install_path: "/home/{{ ansible_ssh_user }}/.rvm"
+      rvm1_user: "{{ ansible_ssh_user }}"
 
     - role: virtualbox
       sudo: yes
@@ -50,6 +51,15 @@
     - role: thinkfan
       sudo: yes
 
+    - role: nuvola_player
+      sudo: yes
+      tags:
+        - nuvola
+
+    - role: vagrant
+      sudo: yes
+      tags:
+        - vagrant
+
     - role: cleanup
       sudo: yes
-

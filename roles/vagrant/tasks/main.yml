@@ -1,0 +1,17 @@
+---
+- name: add vagrant key
+  apt_key:
+    keyserver: pgp.mit.edu
+    id: 2099F7A4
+
+- name: add vagrant repo
+  apt_repository:
+    repo: "deb http://vagrant-deb.linestarve.com/ any main"
+    state: present
+
+- name: install vagrant
+  apt:
+    state: "{{ vagrant_install_state | default('present') }}"
+    name: vagrant
+    update_cache: yes
+    cache_valid_time: 3600

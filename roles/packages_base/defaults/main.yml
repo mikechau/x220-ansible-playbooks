@@ -34,6 +34,10 @@ packages_base_to_install:
   - tp-smapi-dkms
   - read-edid
   - i2c-tools
+  - dconf-editor
+  - ppa-purge
+  - nfs-common
+  - nfs-kernel-server
 
 packages_base_force_state: present
 

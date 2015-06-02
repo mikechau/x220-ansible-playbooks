@@ -1,0 +1,17 @@
+---
+- name: add nuvola key
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: 40554B8FA5FE6F6A
+
+- name: add nuvola repo
+  apt_repository:
+    repo: "deb https://tiliado.eu/nuvolaplayer/repository/deb/ {{ ansible_distribution_release }} devel"
+    state: present
+
+- name: install nuvola
+  apt:
+    state: "{{ nuvola_install_state | default('present') }}"
+    name: nuvolaplayer3
+    update_cache: yes
+    cache_valid_time: 3600

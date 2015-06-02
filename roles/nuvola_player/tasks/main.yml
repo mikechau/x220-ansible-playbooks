@@ -1,0 +1,6 @@
+---
+- include: _nuvola_player_2.yml
+  when: nuvola_install_version == 2
+
+- include: _nuvola_player_3.yml
+  when: nuvola_install_version == 3
