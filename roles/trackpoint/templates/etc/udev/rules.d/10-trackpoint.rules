@@ -1,1 +1,1 @@
-SUBSYSTEM=="serio", DRIVERS=="psmouse", WAIT_FOR="{{ trackpoint_find_device.stdout }}/sensitivity", ATTR{sensitivity}="255", ATTR{speed}="255"
+SUBSYSTEM=="serio", DRIVERS=="psmouse", WAIT_FOR="{{ trackpoint_find_device.stdout }}/sensitivity", ATTR{sensitivity}="{{ trackpoint_sensitivity }}", ATTR{speed}="{{ trackpoint_speed }}"
