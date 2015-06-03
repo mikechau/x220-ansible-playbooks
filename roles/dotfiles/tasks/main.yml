@@ -1,0 +1,8 @@
+---
+- include: _z.yml
+
+- name: add dotfiles
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items: dotfile_configs

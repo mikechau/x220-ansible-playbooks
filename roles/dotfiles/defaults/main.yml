@@ -1,0 +1,13 @@
+---
+dotfile_configs:
+  - name: .bashrc
+    src: bashrc.j2
+    dest: ~/.bashrc
+
+  - name: .inputrc
+    src: inputrc.j2
+    dest: ~/.inputrc
+
+  - name: .profile
+    src: profile.j2
+    dest: ~/.profile

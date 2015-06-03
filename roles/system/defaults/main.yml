@@ -1,0 +1,4 @@
+---
+system_configs:
+  - src: etc/sysctl.d/10-vm-swappiness.conf.j2
+    dest: /etc/sysctl.d/10-vm-swappiness.conf

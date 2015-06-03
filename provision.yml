@@ -61,9 +61,14 @@
       tags:
         - vagrant
 
-    - role: z
+    - role: dotfiles
       tags:
-        - z
+        - dotfiles
+
+    - role: system
+      sudo: yes
+      tags:
+        - system
 
     - role: cleanup
       sudo: yes

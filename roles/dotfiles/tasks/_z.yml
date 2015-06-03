@@ -10,8 +10,3 @@
     dest: ~/code/scripts/z
     version: master
   register: z_git
-
-- name: install z
-  lineinfile:
-    dest: ~/.bashrc
-    line: ". ~/code/scripts/z/z.sh"
