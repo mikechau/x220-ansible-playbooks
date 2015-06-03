@@ -1,0 +1,17 @@
+# http://askubuntu.com/a/37841
+---
+- name: find trackpoint device
+  shell: >
+    find /sys/devices/platform/i8042 -name name | xargs grep -Fl TrackPoint | sed 's/\/input\/input[0-9]*\/name$//'
+  register: trackpoint_find_device
+
+- name: set trackpoint udev rules
+  template:
+    src: etc/udev/rules.d/10-trackpoint.rules
+    dest: /etc/udev/rules.d/10-trackpoint.rules
+
+- name: reload rules
+  command: udevadm control --reload-rules
+
+- name: reload trigger
+  command: udevadm trigger

@@ -70,5 +70,10 @@
       tags:
         - system
 
+    - role: trackpoint
+      sudo: yes
+      tags:
+        - trackpoint
+
     - role: cleanup
       sudo: yes
