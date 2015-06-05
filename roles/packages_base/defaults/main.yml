@@ -39,6 +39,7 @@ packages_base_to_install:
   - nfs-common
   - nfs-kernel-server
   - xournal
+  - synaptic
 
 packages_base_force_state: present
 
