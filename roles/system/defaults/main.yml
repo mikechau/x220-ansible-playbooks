@@ -2,3 +2,6 @@
 system_configs:
   - src: etc/sysctl.d/10-vm-swappiness.conf.j2
     dest: /etc/sysctl.d/10-vm-swappiness.conf
+
+  - src: etc/rc.local.j2
+    dest: /etc/rc.local
