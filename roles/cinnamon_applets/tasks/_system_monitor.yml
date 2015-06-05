@@ -1,0 +1,37 @@
+---
+- name: install system monitor applet dependencies
+  apt:
+    state: present
+    name: "{{ item }}"
+  with_items:
+    - gir1.2-gtop-2.0
+    - gir1.2-networkmanager-1.0
+  sudo: yes
+
+- name: git clone system monitor applet
+  git:
+    repo: https://github.com/cinnamon-applets/system-monitor-applet.git
+    dest: ~/.local/share/cinnamon/applets/system-monitor@ebbes
+    version: master
+
+- name: copy stylesheet
+  template:
+    src: system-monitor/stylesheet.css
+    dest: ~/.local/share/cinnamon/applets/system-monitor@ebbes/stylesheet.css
+
+- name: check for gschema
+  stat:
+    path: /usr/share/glib-2.0/schemas/org.cinnamon.applets.system-monitor.gschema.xml
+  sudo: yes
+  register: cinnamon_applets_system_monitor_gschema
+
+- name: install gschema
+  command: cp org.cinnamon.applets.system-monitor.gschema.xml /usr/share/glib-2.0/schemas
+  args:
+    chdir: "/home/{{ ansible_ssh_user }}/.local/share/cinnamon/applets/system-monitor@ebbes"
+  sudo: yes
+  when: not cinnamon_applets_system_monitor_gschema.stat.exists
+
+- name: compile gschema
+  command: glib-compile-schemas /usr/share/glib-2.0/schemas/
+  sudo: yes

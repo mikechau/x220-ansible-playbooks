@@ -1,22 +1,6 @@
 ---
 - name: install cinnamon applets
   hosts: thinkpad
-  vars:
-    cinnamon_applet_dir: ~/cinnamon/install/applets
-  tasks:
-    - name: create directory
-      file:
-        path: "{{ cinnamon_applet_dir }}"
-        state: directory
-        recurse: yes
+  roles:
+    - role: cinnamon_applets
 
-    - name: git clone windows 7 style window list grouping
-      git:
-        repo: https://github.com/jake-phy/WindowIconList.git
-        dest: "{{ cinnamon_applet_dir }}/WindowIconList"
-        version: master
-
-  post_tasks:
-    - name: run these commands
-      debug:
-        msg: "python {{ cinnamon_applet_dir }}/WindowIconList/configure.py"

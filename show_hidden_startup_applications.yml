@@ -1,0 +1,8 @@
+---
+- name: show hidden startup applications
+  hosts: thinkpad
+  tasks:
+    - name: show all hidden startup applications
+      shell: >
+        sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
+      sudo: yes

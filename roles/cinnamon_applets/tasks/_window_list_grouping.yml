@@ -1,0 +1,6 @@
+---
+- name: git clone windows 7 style window list grouping
+  git:
+    repo: https://github.com/jake-phy/WindowIconList.git
+    dest: "{{ cinnamon_applets_dir }}/WindowIconList"
+    version: master

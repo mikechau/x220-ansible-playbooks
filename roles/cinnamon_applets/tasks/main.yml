@@ -1,0 +1,18 @@
+---
+- name: create directory
+  file:
+    path: "{{ cinnamon_applets_dir }}"
+    state: directory
+    recurse: yes
+
+- include: _window_list_grouping.yml
+
+- include: _system_monitor.yml
+
+- name: run these commands
+  debug:
+    msg: "python {{ cinnamon_applets_dir }}/WindowIconList/configure.py"
+
+- name: reload cinnamon
+  debug:
+    msg: reload cinnamon via alt+f2 r

@@ -1,0 +1,88 @@
+.sma-label {
+  color: #bbb;
+  font-size: 12px;
+}
+
+/* cpu, mem */
+.sma-status-label {
+  color: #bbb;
+  font-size: 11px;
+  padding: 5px 4px 0px 10px;
+}
+
+/* c (temp) */
+.sma-unit-label {
+  color: #aaa;
+  font-size: 12px;
+  padding: 4px 3px 0 2px;
+}
+
+/* percent */
+.sma-perc-label {
+  color: #aaa;
+  font-size: 12px;
+  padding: 4px 3px 0 2px;
+}
+
+/* value */
+.sma-status-value {
+  min-width: 10px;
+  font-size: 12px;
+  padding-top: 4px;
+  text-align: right;
+}
+
+.sma-big-status-value {
+  min-width: 20px;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-top: 4px;
+  text-align: right;
+}
+
+.sma-value {
+  text-align: right;
+  width: 45px;
+}
+
+.sma-void {
+  width: 0px;
+}
+
+.sma-chart {
+  padding: 1px 2px;
+}
+
+.sma-tooltip-box {
+  font-size: 0.85em;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(10, 10, 10, 0.7);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.sma-tooltip-item {
+  padding: 0px;
+  spacing: 10px;
+}
+
+.sma-dialog-headline {
+  font-size: 12pt;
+  font-weight: bold;
+  color: #fff;
+}
+
+.sma-dialog-main-layout {
+  spacing: 24px;
+  padding: 10px;
+}
+
+.sma-dialog-message-layout {
+  spacing: 16px;
+}
+
+.sma-dialog-description {
+  font-size: 10pt;
+  color: white;
+}

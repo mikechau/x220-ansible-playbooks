@@ -9,4 +9,3 @@
     repo: https://github.com/rupa/z.git
     dest: ~/code/scripts/z
     version: master
-  register: z_git

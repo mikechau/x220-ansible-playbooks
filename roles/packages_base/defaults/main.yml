@@ -38,6 +38,7 @@ packages_base_to_install:
   - ppa-purge
   - nfs-common
   - nfs-kernel-server
+  - xournal
 
 packages_base_force_state: present
 

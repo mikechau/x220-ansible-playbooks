@@ -1,0 +1,32 @@
+---
+- name: pip install gcalcli and its dependencies
+  pip:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - vobject
+    - parsedatetime
+    - gcalcli
+  sudo: yes
+
+- name: create directories
+  file:
+    state: directory
+    path: ~/cron
+
+- name: create gcalcli crontab
+  template:
+    src: gcalcli-cron.j2
+    dest: ~/cron/gcalcli-cron
+
+- name: get current crontab
+  command: crontab -l
+  register: crontab_output
+
+- name: generate local crontab
+  shell: crontab -l > ~/cron/local-cron
+
+- name: append gcalci to crontab and load it
+  shell: >
+    cat ~/cron/gcalcli-cron >> ~/local-cron && crontab ~/cron/gcalcli-cron
+  when: crontab_output.stdout.find('gcalcli') == -1

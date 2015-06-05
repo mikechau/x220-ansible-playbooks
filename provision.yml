@@ -75,5 +75,13 @@
       tags:
         - trackpoint
 
+    - role: customizations_user
+      tags:
+        - customizations_user
+
+    - role: gcalcli
+      tags:
+        - gcalcli
+
     - role: cleanup
       sudo: yes
