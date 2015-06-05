@@ -83,5 +83,9 @@
       tags:
         - gcalcli
 
+    - role: kupfer
+      tags:
+        - kupfer
+
     - role: cleanup
       sudo: yes
