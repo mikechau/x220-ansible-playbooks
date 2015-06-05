@@ -1,0 +1,8 @@
+---
+- name: install flash
+  apt:
+    name: adobe-flashplugin
+    state: present
+
+- include: _intel.yml
+  when: adobe_flash_hw == 'intel'

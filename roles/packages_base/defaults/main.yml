@@ -8,7 +8,6 @@ packages_base_to_install:
   - speedcrunch
   - redshift-gtk
   - aptitude
-  - adobe-flashplugin
   - build-essential
   - yakuake
   - libpq-dev

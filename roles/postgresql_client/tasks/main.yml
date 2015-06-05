@@ -11,7 +11,10 @@
 
 - name: install postgresql
   apt:
-    name: "postgresql-client"
+    name: "{{ item }}"
     state: "{{ postgres_client_install_state | default('latest') }}"
     update_cache: yes
     cache_valid_time: 3600
+  with_items:
+    - postgresql-client
+    - postgresql-client-common

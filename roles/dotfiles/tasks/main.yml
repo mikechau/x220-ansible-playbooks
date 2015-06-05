@@ -5,4 +5,5 @@
   template:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
+    mode: "u=rw"
   with_items: dotfile_configs

@@ -1,0 +1,32 @@
+# https://www.reddit.com/r/Ubuntu/comments/1wpavp/how_to_enable_vdpau_acceleration_for_accelerated/
+---
+- name: add repo (intel)
+  apt:
+    repo: ppa:nilarimogard/webupd8
+    state: present
+
+- name: update packages (intel)
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: install libvdpau-va-gl1 (intel)
+  apt:
+    name: libvdpau-va-gl1
+    state: present
+
+- name: add VDPAU profile (intel)
+  template:
+    src: etc/profile.d/vdpau.intel.sh.j2
+    dest: /etc/profile.d/vdpau.sh
+    mode: "u=rw,g=r,o=r"
+
+- name: create /etc/adobe dir (intel)
+  file:
+    state: directory
+    path: /etc/adobe
+
+- name: create mms.cfg (intel)
+  template:
+    src: etc/adobe/mms.intel.cfg.j2
+    dest: /etc/adobe/mms.cfg

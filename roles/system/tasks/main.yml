@@ -3,4 +3,5 @@
   template:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
+    mode: "{{ item.mode | default('u=rw,g=r,o=r') }}"
   with_items: system_configs

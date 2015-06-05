@@ -2,6 +2,8 @@
 system_configs:
   - src: etc/sysctl.d/10-vm-swappiness.conf.j2
     dest: /etc/sysctl.d/10-vm-swappiness.conf
+    mode: "u=rw,g=r,o=r"
 
   - src: etc/rc.local.j2
     dest: /etc/rc.local
+    mode: "u=rwx,g=xr,o=x"
