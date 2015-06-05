@@ -103,3 +103,10 @@
         state: absent
         name: webbrowser-app
         purge: yes
+
+    - name: remove zeitgeist
+      apt:
+        state: absent
+        name: zeitgeist
+        purge: yes
+
