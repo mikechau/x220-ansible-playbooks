@@ -1,0 +1,17 @@
+---
+- name: add postgresql repo key
+  apt_key: 
+    url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+    state: present
+
+- name: add postgresql apt repo
+  apt_repository:
+    repo: "deb http://apt.postgresql.org/pub/repos/apt/ {{ ansible_distribution_release }}-pgdg main"
+    state: present
+
+- name: install postgresql
+  apt:
+    name: "postgresql-client"
+    state: "{{ postgres_client_install_state | default('latest') }}"
+    update_cache: yes
+    cache_valid_time: 3600

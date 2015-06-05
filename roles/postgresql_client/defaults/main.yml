@@ -1,0 +1,3 @@
+---
+postgres_client_version: 9.4
+postgres_client_install_state: present

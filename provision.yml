@@ -7,6 +7,11 @@
       tags:
         - packages
 
+    - role: postgresql_client
+      sudo: yes
+      tags:
+        - psql-client
+
     - role: jemalloc
       sudo: yes
       jemalloc_install: source
