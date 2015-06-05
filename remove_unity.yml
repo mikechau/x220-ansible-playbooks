@@ -77,3 +77,29 @@
         - "~/.config/compiz-1"
         - "~/.config/nautilus"
         - "~/.local/share/nautilus"
+
+    - name: remove ibus
+      apt:
+        state: absent
+        purge: yes
+        name: ibus
+
+    - name: remove more unity packages
+      shell: >
+        apt-get remove -y
+        unity
+        unity-asset-pool
+        unity-control-center
+        unity-control-center-signon
+        unity-gtk-module-common
+        unity-lens*
+        unity-services
+        unity-settings-daemon
+        unity-webapps*
+        unity-voice-service
+
+    - name: remove webbrowser-app
+      apt:
+        state: absent
+        name: webbrowser-app
+        purge: yes

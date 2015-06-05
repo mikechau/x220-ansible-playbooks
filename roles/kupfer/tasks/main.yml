@@ -1,0 +1,11 @@
+---
+- name: add kupfer ppa
+  apt_repository:
+    repo: ppa:kupfer-team/ppa
+
+- name: install kupfer
+  apt:
+    state: present
+    name: kupfer
+    update_cache: yes
+    cache_valid_time: 3600

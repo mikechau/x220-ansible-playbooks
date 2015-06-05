@@ -1,16 +1,16 @@
 ---
-- name: add multiarch
+- name: add multiarch (nuvola 2)
   command: dpkg --add-architecture i386
 
-- name: add nuvola repository
+- name: add nuvola repository (nuvola 2)
   apt_repository:
-    repo: ppa:nuvola-player-builders/stable
+    repo: ppa:nuvola-player-builders/unstable
 
-- name: apt-get upgrade
+- name: apt-get upgrade (nuvola 2)
   apt:
     upgrade: dist
 
-- name: install nuvola player
+- name: install nuvola player (nuvola 2)
   apt:
     name: nuvolaplayer
     state: "{{ nuvola_install_state | default('present') }}"

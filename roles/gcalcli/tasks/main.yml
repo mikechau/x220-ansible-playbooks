@@ -28,5 +28,5 @@
 
 - name: append gcalci to crontab and load it
   shell: >
-    cat ~/cron/gcalcli-cron >> ~/local-cron && crontab ~/cron/gcalcli-cron
+    cat ~/cron/gcalcli-cron >> ~/cron/local-cron && crontab ~/cron/gcalcli-cron
   when: crontab_output.stdout.find('gcalcli') == -1
