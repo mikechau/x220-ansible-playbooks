@@ -1,0 +1,35 @@
+# yakuake colors
+
+colors:
+  - name: Ubuntu Linux
+    config:
+      foreground:
+        color: > #FFFFFF
+        intense: > #FFFFFF
+      background:
+        color: > #2F0B24
+        intense: > #000000
+      color_1:
+        color: > #000000
+        intense: > #686868
+      color_2:
+        color: > #B21818
+        intense: > #FF5454
+      color_3:
+        color: > #18B218
+        intense: > #54FF54
+      color_4:
+        color: > #B26818
+        intense: > #FFFF54
+      color_5:
+        color: > #1E90FF
+        intense: > #80B3FF
+      color_6:
+        color: > #B218B2
+        intense: > #FF54FF
+      color_7:
+        color: > #18B2B2
+        intense: > #54FFFF
+      color_8:
+        color: > #B2B2B2
+        intense: > #FFFFFF

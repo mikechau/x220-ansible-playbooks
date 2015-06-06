@@ -1,0 +1,16 @@
+[Description]
+Skin=Transparent Tabs
+Author=futpib
+Email=futpib@gmail.com
+Icon=/icon.png
+
+[Border]
+red=214
+green=210
+blue=208
+width=1
+
+[Background]
+back_image=/back.png
+left_corner=/back.png
+right_corner=/back.png

@@ -1,0 +1,26 @@
+[$Version]
+update_info=yakuake.upd:2.9.9-startupnotification
+
+[Appearance]
+Skin=transparent-tabs
+TerminalHighlightOnManualActivation=true
+Translucency=true
+
+[Desktop Entry]
+DefaultProfile=Shell.profile
+
+[Dialogs]
+FirstRun=false
+
+[Favorite Profiles]
+Favorites=Shell.profile
+
+[KFileDialog Settings]
+Height 768=450
+Recent Files[$e]=151686-transparent-tabs.tar.gz,$HOME/Downloads/151686-transparent-tabs.tar.gz
+Recent URLs[$e]=$HOME/Downloads/
+Width 1366=720
+
+[Window]
+Height=90
+Width=100
