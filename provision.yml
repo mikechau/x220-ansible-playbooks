@@ -97,5 +97,10 @@
       tags:
         - kupfer
 
+    - role: gnome_encfs_manager
+      sudo: yes
+      tags:
+        - encfs
+
     - role: cleanup
       sudo: yes

@@ -1,0 +1,34 @@
+# encfs
+
+stash:
+  - name: personal
+    config:
+      mount_directory: $HOME/Private
+
+      mount_options:
+        mount_on_startup: true
+        mount_when_getting_available: false
+        allow_other_users_to_access_this_stash: false
+        unmount_when_idle_after_x_minutes: false
+
+      additional_options:
+        save_password_in_keyring: true
+        persistent_mount_directory: true
+        open_in_file_manager: false
+        show_in_tray_menu: true
+
+      advanced:
+        encfs_config_file: $HOME/EncFs/Private/.encfs6.xml
+
+preferences:
+  general:
+    automatically_start_on_login: true
+    unmount_all_stashes_on_logout: true
+
+  tray_icon:
+    show_icon_in_tray: true
+      start_hidden_to_tray: true
+      organize_menu_in_stash_groups: true
+
+  advanced:
+    mount_dir_base: $HOME/EncFs

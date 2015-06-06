@@ -1,0 +1,14 @@
+---
+- name: add repo
+  apt_repository:
+    repo: ppa:gencfsm
+
+- name: install encfs and gnome encfs manager
+  apt:
+    state: present
+    name: "{{ item }}"
+    update_cache: yes
+    cache_valid_time: 3600
+  with_items:
+    - encfs
+    - gnome-encfs-manager
