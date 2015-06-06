@@ -18,7 +18,7 @@ stash:
         show_in_tray_menu: true
 
       advanced:
-        encfs_config_file: $HOME/EncFs/Private/.encfs6.xml
+        encfs_config_file: $HOME/EncFs/config/Private/.encfs6.xml
 
 preferences:
   general:

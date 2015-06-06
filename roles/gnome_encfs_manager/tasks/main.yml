@@ -12,3 +12,14 @@
   with_items:
     - encfs
     - gnome-encfs-manager
+
+- name: create directories
+  file:
+    state: directory
+    path: "{{ item }}"
+    owner: "{{ ansible_ssh_user }}"
+    group: "{{ ansible_ssh_user }}"
+    recurse: yes
+  with_items:
+    - "/home/{{ ansible_ssh_user }}/Private"
+    - "/home/{{ ansible_ssh_user }}/EncFs/config/Private"
