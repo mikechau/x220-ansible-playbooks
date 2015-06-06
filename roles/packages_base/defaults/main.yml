@@ -39,6 +39,7 @@ packages_base_to_install:
   - xournal
   - synaptic
   - tree
+  - unclutter
 
 packages_base_force_state: present
 
