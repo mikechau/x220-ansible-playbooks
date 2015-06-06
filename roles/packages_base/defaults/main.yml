@@ -38,6 +38,7 @@ packages_base_to_install:
   - nfs-kernel-server
   - xournal
   - synaptic
+  - tree
 
 packages_base_force_state: present
 
