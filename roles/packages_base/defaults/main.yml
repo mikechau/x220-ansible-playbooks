@@ -40,6 +40,7 @@ packages_base_to_install:
   - synaptic
   - tree
   - unclutter
+  - vlc
 
 packages_base_force_state: present
 

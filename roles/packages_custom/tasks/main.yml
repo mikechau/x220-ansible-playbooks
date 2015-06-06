@@ -2,6 +2,7 @@
 - name: add repos
   apt_repository:
     repo: "{{ item.repo }}"
+    state: present
   when: item.repo is defined
   with_items: packages_custom_to_install
 

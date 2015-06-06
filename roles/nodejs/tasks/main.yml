@@ -7,6 +7,7 @@
 - name: add nodejs repo
   apt_repository:
     repo: "deb https://deb.nodesource.com/node_0.12 {{ ansible_distribution_release }} main"
+    state: present
 
 - name: install nodejs
   apt:

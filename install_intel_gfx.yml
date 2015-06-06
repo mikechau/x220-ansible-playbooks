@@ -6,6 +6,7 @@
     - name: install xorg edgers
       apt_repository:
         repo: ppa:xorg-edgers/ppa
+        state: present
 
     - name: update and upgrade packages
       apt:

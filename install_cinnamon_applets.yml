@@ -3,4 +3,3 @@
   hosts: thinkpad
   roles:
     - role: cinnamon_applets
-

@@ -15,6 +15,7 @@
     - name: add cinnamon repo
       apt_repository:
         repo: ppa:tsvetko.tsvetkov/cinnamon
+        state: present
       sudo: yes
 
     - name: install cinnamon

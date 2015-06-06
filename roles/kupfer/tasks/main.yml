@@ -2,6 +2,7 @@
 - name: add kupfer ppa
   apt_repository:
     repo: ppa:kupfer-team/ppa
+    state: present
 
 - name: install kupfer
   apt:

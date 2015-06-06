@@ -2,6 +2,7 @@
 - name: add repo
   apt_repository:
     repo: ppa:gencfsm
+    state: present
 
 - name: install encfs and gnome encfs manager
   apt:
