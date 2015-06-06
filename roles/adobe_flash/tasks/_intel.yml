@@ -1,7 +1,7 @@
 # https://www.reddit.com/r/Ubuntu/comments/1wpavp/how_to_enable_vdpau_acceleration_for_accelerated/
 ---
 - name: add repo (intel)
-  apt:
+  apt_repository:
     repo: ppa:nilarimogard/webupd8
     state: present
 
