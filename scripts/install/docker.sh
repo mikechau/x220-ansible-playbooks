@@ -5,4 +5,4 @@
 wget -qO- https://get.docker.com/ | sh
 
 # add docker group
-sudo usermod -aG docker ubuntu
+sudo usermod -aG docker $USER
