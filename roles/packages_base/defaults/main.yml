@@ -41,6 +41,8 @@ packages_base_to_install:
   - tree
   - unclutter
   - vlc
+  - gparted
+  - usb-creator-gtk
 
 packages_base_force_state: present
 
