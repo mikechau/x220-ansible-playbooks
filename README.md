@@ -2,6 +2,15 @@
 
 A set of Ansible playbooks for my Thinkpad x220.
 
+These set of playbooks/scripts cover the set up of:
+
+- Ubuntu 14.04 LTS with the Cinnamon Desktop Environment.
+- Development environment for Ruby/Rails/Node with Vagrant/Docker.
+- Thinkpad specific customizations (thinkfan/tlp/trackpoint).
+- Gfx/Flash/Java/Media/Dropbox.
+- EncFS.
+- Ddatabase Clients for MySQL and PostgreSQL.
+
 ## SCRIPTS
 
 - `./galaxy.sh` - installs required roles from **ansible-galaxy**.
