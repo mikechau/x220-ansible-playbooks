@@ -7,9 +7,9 @@ These set of playbooks/scripts cover the set up of:
 - Ubuntu 14.04 LTS with the Cinnamon Desktop Environment.
 - Development environment for Ruby/Rails/Node with Vagrant/Docker.
 - Thinkpad specific customizations (thinkfan/tlp/trackpoint).
-- Gfx/Flash/Java/Media/Dropbox.
-- EncFS.
-- Ddatabase Clients for MySQL and PostgreSQL.
+- Graphics/Flash/Java/Messengers/Media Players/Dropbox+EncFS.
+- Database Clients for MySQL and PostgreSQL.
+- Additional packages for a more comfortable desktop experience.
 
 ## SCRIPTS
 
