@@ -7,3 +7,9 @@ system_configs:
   - src: etc/rc.local.j2
     dest: /etc/rc.local
     mode: "u=rwx,g=xr,o=x"
+
+  - src: etc/security/limits.d/60-file-limit.conf.j2
+    dest: /etc/security/limits.d/60-file-limit.conf
+    mode: "u=rw,g=r,o=r"
+
+system_file_limit: 16384

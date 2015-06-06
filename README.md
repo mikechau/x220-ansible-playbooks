@@ -6,6 +6,7 @@ These set of playbooks/scripts cover the set up of:
 
 - Ubuntu 14.04 LTS with the Cinnamon Desktop Environment.
 - Development environment for Ruby/Rails/Node with Vagrant/Docker.
+- System optimizations.
 - Thinkpad specific customizations (thinkfan/tlp/trackpoint).
 - Graphics/Flash/Java/Messengers/Media Players/Dropbox+EncFS.
 - Database Clients for MySQL and PostgreSQL.
@@ -14,7 +15,9 @@ These set of playbooks/scripts cover the set up of:
 ## SCRIPTS
 
 - `./galaxy.sh` - installs required roles from **ansible-galaxy**.
+- `./setup.sh` - display local ansible facts
 - `./local.sh` - specify a playbook to run locally, sudo pass requested
+- `./remove.sh` - clear out ansible *.retry
 
 ### INSTALL
 
