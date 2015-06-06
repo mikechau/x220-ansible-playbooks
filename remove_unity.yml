@@ -1,5 +1,5 @@
 # http://askubuntu.com/questions/292394/how-to-completely-remove-unity-and-replace-it-with-cinnamon
-
+# http://www.tecmint.com/remove-unity-and-install-cinnamon-and-mate-desktop-in-ubuntu-14-10/
 ---
 - name: remove unity
   hosts: thinkpad
