@@ -43,6 +43,7 @@ packages_base_to_install:
   - vlc
   - gparted
   - usb-creator-gtk
+  - quadrapassel
 
 packages_base_force_state: present
 
