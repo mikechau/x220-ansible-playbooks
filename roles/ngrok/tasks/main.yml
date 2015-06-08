@@ -1,0 +1,17 @@
+---
+- name: download zip
+  get_url:
+    url: "https://dl.ngrok.com/ngrok_{{ ngrok_version }}_linux_amd64.zip"
+    dest: "/tmp/ngrok_{{ ngrok_version }}.zip"
+
+- name: extract zip
+  unarchive:
+    src: "/tmp/ngrok_{{ ngrok_version }}.zip"
+    dest: ~/code/scripts
+    copy: no
+
+- name: add auth
+  command: "./ngrok authtoken {{ ngrok_secret_token }}"
+  args:
+    chdir: ~/code/scripts
+  when: ngrok_secret_token is defined
