@@ -44,6 +44,8 @@ packages_base_to_install:
   - gparted
   - usb-creator-gtk
   - quadrapassel
+  - p7zip
+  - p7zip-rar
 
 packages_base_force_state: present
 
