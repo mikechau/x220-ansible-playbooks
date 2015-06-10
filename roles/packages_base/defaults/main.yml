@@ -46,6 +46,7 @@ packages_base_to_install:
   - quadrapassel
   - p7zip
   - p7zip-rar
+  - pdftk
 
 packages_base_force_state: present
 
