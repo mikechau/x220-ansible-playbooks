@@ -47,6 +47,7 @@ packages_base_to_install:
   - p7zip
   - p7zip-rar
   - pdftk
+  - ttf-ancient-fonts
 
 packages_base_force_state: present
 
