@@ -21,7 +21,6 @@ packages_base_to_install:
   - autoconf
   - make
   - chromium-browser
-  - chromium-codecs-ffmpeg
   - chromium-codecs-ffmpeg-extra
   - python-gpgme
   - tig
