@@ -6,4 +6,3 @@ START=yes
 
 # Additional startup parameters
 DAEMON_ARGS="-q -b 1 -s 3"
-

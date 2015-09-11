@@ -1,0 +1,16 @@
+---
+- name: add tlp repo
+  apt_repository:
+    repo: ppa:linrunner/tlp
+    state: present
+
+- name: install tlp
+  apt:
+    state: present
+    name: "{{ item }}"
+  with_items:
+    - tlp
+    - tlp-rdw
+    - acpi-call-dkms
+    - acpi-call-tools
+    - tp-smapi-dkms

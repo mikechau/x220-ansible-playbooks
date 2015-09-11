@@ -7,6 +7,12 @@
       tags:
         - packages
 
+    - role: tlp
+      sudo: yes
+      tags:
+        - packages
+        - tlp
+
     - role: adobe_flash
       sudo: yes
       tags:

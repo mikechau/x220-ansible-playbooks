@@ -18,7 +18,4 @@ packages_custom_to_install:
   - name: atom
     repo: ppa:webupd8team/atom
 
-  - name: tlp
-    repo: ppa:linrunner/tlp
-
 packages_custom_force_state: present

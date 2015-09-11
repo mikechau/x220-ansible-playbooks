@@ -26,9 +26,6 @@ packages_base_to_install:
   - tig
   - skype
   - lm-sensors
-  - acpi-call-dkms
-  - acpi-call-tools
-  - tp-smapi-dkms
   - read-edid
   - i2c-tools
   - dconf-editor
