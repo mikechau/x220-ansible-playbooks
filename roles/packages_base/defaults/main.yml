@@ -10,9 +10,7 @@ packages_base_to_install:
   - aptitude
   - build-essential
   - yakuake
-  - libpq-dev
   - mysql-client
-  - libmysqlclient-dev
   - dkms
   - apt-transport-https
   - lsb-release
@@ -44,6 +42,19 @@ packages_base_to_install:
   - p7zip-rar
   - pdftk
   - ttf-ancient-fonts
+  - libgmp-dev
+  - libpq-dev
+  - libmysqlclient-dev
+  - libssl-dev
+  - libreadline-dev
+  - zlib1g-dev
+  - libffi-dev
+  - libncurses5-dev
+  - libyaml-dev
+  - libxml2
+  - libxml2-dev
+  - libxslt1-dev
+  - libsqlite3-dev
 
 packages_base_force_state: present
 
