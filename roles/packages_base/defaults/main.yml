@@ -55,6 +55,7 @@ packages_base_to_install:
   - libxml2-dev
   - libxslt1-dev
   - libsqlite3-dev
+  - autossh
 
 packages_base_force_state: present
 
